@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Local AI</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #111;
+            color: white;
+            text-align: center;
+        }
+
+        .box {
+            margin-top: 50px;
+        }
+
+        input {
+            width: 60%;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px;
+        }
+
+        .answer {
+            margin-top: 30px;
+            white-space: pre-line;
+            background: #222;
+            padding: 20px;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>🤖 LocalBrain IA</h1>
+
+    <form method="POST">
+        <input type="text" name="question" placeholder="Pose ta question..." required>
+        <button type="submit">Envoyer</button>
+    </form>
+
+    {% if answer %}
+    <div class="answer">
+        {{ answer }}
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
